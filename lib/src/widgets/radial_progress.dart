@@ -10,6 +10,7 @@ class RadialProgress extends StatefulWidget {
   final double secondaryWeight;
   final int percentageTitleFontSize;
   final List<Color>? colors;
+  final TextStyle textStyle;
 
   const RadialProgress({
     super.key,
@@ -20,6 +21,7 @@ class RadialProgress extends StatefulWidget {
     this.primaryWeight = 10,
     this.percentageTitleFontSize = 30,
     this.colors,
+    this.textStyle = const TextStyle(fontSize: 30),
   });
 
   @override
@@ -78,9 +80,7 @@ class _RadialProgressState extends State<RadialProgress>
                   alignment: Alignment.center,
                   child: Text(
                     '${data.round()}%',
-                    style: const TextStyle(
-                      fontSize: 30,
-                    ),
+                    style: widget.textStyle,
                   )),
             ]),
           );

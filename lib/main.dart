@@ -16,12 +16,47 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'App design',
-        theme: ThemeData(
-          primarySwatch: Colors.indigo,
-        ),
-        home: const SlideshowPage());
+      debugShowCheckedModeBanner: false,
+      title: 'App design',
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+      ),
+      home: const App(),
+    );
+  }
+}
+
+class App extends StatelessWidget {
+  const App({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => const CircularGraphics())),
+                child: const Text('Radial'),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const SlideshowPage())),
+                child: const Text('Slides'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
 
