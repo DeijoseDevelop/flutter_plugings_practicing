@@ -144,6 +144,9 @@ class _CustomProvider extends InheritedWidget {
   static _CustomProvider of(BuildContext context) =>
       context.findAncestorWidgetOfExactType<_CustomProvider>()!;
 
+  // static _CustomProvider of(BuildContext context) =>
+  //     context.dependOnInheritedWidgetOfExactType<_CustomProvider>()!;
+
   @override
   bool updateShouldNotify(covariant InheritedWidget oldWidget) => false;
 }

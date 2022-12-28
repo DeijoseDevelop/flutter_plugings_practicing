@@ -36,7 +36,6 @@ class MySlideshow extends StatelessWidget {
         SvgPicture.asset('assets/svg/slide-2.svg'),
         SvgPicture.asset('assets/svg/slide-3.svg'),
         SvgPicture.asset('assets/svg/slide-4.svg'),
-        SvgPicture.asset('assets/svg/slide-5.svg'),
       ],
     );
   }
